@@ -1,7 +1,6 @@
 # Jokes Generator
 
-Random jokes generator by fetching API data from an URL
-
+A random jokes generator that fetches API data from an URL and keeps counting the number of reading jokes
 ## Tech Stack
 
 - React.js

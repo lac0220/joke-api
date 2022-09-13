@@ -14,7 +14,7 @@ export default function Joke({joke}) {
     }, [joke]);
 
     return (
-        <div class="mt-5">
+        <div className="mt-5">
             {joke.type === 'single' ? 
                 <h1 className="display-5">{joke.joke}</h1>  : 
                 <>
