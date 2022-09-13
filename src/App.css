@@ -6,3 +6,12 @@ body {
     background-size: cover;
     font-family:'Times New Roman', Times, serif;
 }
+
+@media screen and (max-width: 500px) {
+    
+    html, 
+    body {
+
+        background-size: 100rem;
+    }
+}
