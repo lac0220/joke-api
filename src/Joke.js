@@ -14,12 +14,12 @@ export default function Joke({joke}) {
     }, [joke]);
 
     return (
-        <div className="mt-5">
+        <div className="mt-5 overflow-auto" style={{height: "24rem"}} >
             {joke.type === 'single' ? 
                 <h1 className="display-5">{joke.joke}</h1>  : 
                 <>
-                    <h2 className="display-5">{joke.setup}</h2> 
-                    <h3 className="pt-3 fst-italic fs-1">{delivery}</h3>
+                    <h1 className="display-5">{joke.setup}</h1> 
+                    <h2 className="pt-3 fst-italic fs-1">{delivery}</h2>
                 </>
             }
         </div>

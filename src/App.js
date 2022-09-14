@@ -30,8 +30,9 @@ export default function App() {
             <h1 className="mb-4 display-3">Jokes Generator</h1>
             <h2 className="mb-2 fs-1">Find the one that makes you laugh...</h2>
             <p className="mb-1 display-2"><FontAwesomeIcon icon={faArrowAltCircleDown}/></p>
-            <Button fetchData={fetchData}/>
+            <Button fetchData={fetchData} />
             <Joke joke={joke} />
+            <p class="pb-4 pt-3 fs-4">Copyright &copy; Laszlo Nemeth 2022</p>
         </div>
     );
 }
