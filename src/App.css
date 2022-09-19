@@ -1,16 +1,27 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=BioRhyme&display=swap');
 
 html, 
 body {
     background: url(img/background_picture.webp) center repeat;	    
     background-size: cover;
-    font-family:'Times New Roman', Times, serif;
+    font-family:'BioRhyme', 'Times New Roman', Times, serif;
+}
+
+h1 {
+    letter-spacing: 0.1rem;
+    text-shadow: -1px -1px rgb(168, 139, 139), 1px 1px rgb(7, 7, 7), -3px 0 10px #000;
+}
+
+h2,
+h3 {
+    text-shadow: -1px -1px rgb(168, 139, 139), 1px 1px rgb(7, 7, 7), -3px 0 5px #000;
 }
 
 @media screen and (max-width: 500px) {
     
     html, 
     body {
-        background-size: 120rem;
+        background-size: 140rem;
     }
 }

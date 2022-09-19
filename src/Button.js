@@ -8,8 +8,8 @@ export default function ButtonAndCounter(props) {
     
     return (
         <div>
-            <h2 className="mb-4 fs-2">You have been reading {count} jokes</h2>
-            <Button className="mx-auto text-center fs-3" variant="success" active onClick={() => setCount(count + 1) || props.fetchData()}>Press for the next <FontAwesomeIcon icon={faWandSparkles} style={{marginLeft: "5px"}}/></Button>
+            <p className="mb-4 fs-2">You have been reading {count} jokes</p>
+            <Button className="mx-auto text-center fs-3" aria-label="Next joke" variant="success" active onClick={() => setCount(count + 1) || props.fetchData()}>Press for the next <FontAwesomeIcon icon={faWandSparkles} style={{marginLeft: "5px"}}/></Button>
         </div>
     );
 }

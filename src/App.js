@@ -11,11 +11,15 @@ export default function App() {
     const url = "https://v2.jokeapi.dev/joke/Any";
 
     async function fetchData() {
-        const resp = await fetch(url);
-        const result = await resp.json();
-        // console.log(result);
-        setJoke(result);
-    }
+        try {
+            const resp = await fetch(url);
+            const result = await resp.json();
+            // console.log(result);
+            setJoke(result);
+            } catch (err) {
+                alert("The server is temporarily unable to service your request")
+            }
+        }
 
     useEffect(() => {
         fetchData();
@@ -28,11 +32,11 @@ export default function App() {
     return (
         <div className="container vh-100 mt-2 pt-5 text-center text-white">
             <h1 className="mb-4 display-3">Jokes Generator</h1>
-            <h2 className="mb-2 fs-1">Find the one that makes you laugh...</h2>
+            <p className="mb-2 fs-1">Find the one that makes you laugh...</p>
             <p className="mb-1 display-2"><FontAwesomeIcon icon={faArrowAltCircleDown}/></p>
             <Button fetchData={fetchData} />
             <Joke joke={joke} />
-            <p class="pb-4 pt-3 fs-4">Copyright &copy; Laszlo Nemeth 2022</p>
+            <footer className="pb-4 fs-4">Copyright &copy; Laszlo Nemeth 2022</footer>
         </div>
     );
 }

@@ -5,19 +5,24 @@ A random jokes generator that fetches API data from an URL and keeps counting th
 
 - React.js
 - Bootstrap 5
+- CSS3
 
 ## Setup
 
-To run this project locally:
-
-```
-$ npx create-react-app my-app
-$ cd my-app
-$ npm start
-```
 Used [React](https://reactjs.org/) for implementation
 
-[API:](https://sv443.net/jokeapi/v2/) Free API - serves uniformly and well formatted jokes
+Free [API](https://sv443.net/jokeapi/v2/) - serves uniformly and well formatted jokes
+
+### To run this project locally:
+
+```
+cd ../lorem
+$ npm install
+$ npm start
+```
+Third-Party NPM Packages:
+
+- react-bootstrap: for adding bootstrap in React component
 
 ## Version
 
