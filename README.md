@@ -1,6 +1,7 @@
 # Jokes Generator
 
-A random jokes generator that fetches API data from an URL and keeps counting the number of reading jokes
+A random jokes generator that fetches API data from an URL and gives access to jokes platform. The web application keeps counting the number of reading jokes
+
 ## Tech Stack
 
 - React.js
@@ -22,7 +23,9 @@ $ npm start
 ```
 Third-Party NPM Packages:
 
-- react-bootstrap: for adding bootstrap in React component
+- react-bootstrap: for adding Bootstrap CSS Framework to the project
+
+- font awesome: for icon library and toolkit
 
 ## Version
 
