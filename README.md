@@ -1,6 +1,6 @@
 # Jokes Generator
 
-A random jokes generator that fetches API data from an URL and gives access to jokes platform. The web application keeps counting the number of reading jokes
+A random jokes generator that fetches API data from an URL and gives access to jokes platform. In the meantime, the web application also keeps counting the number of reading jokes
 
 ## Tech Stack
 
@@ -23,6 +23,8 @@ $ npm start
 ```
 Third-Party NPM Packages:
 
+- axios: for creating HTTP requests
+
 - react-bootstrap: for adding Bootstrap CSS Framework to the project
 
 - font awesome: for icon library and toolkit
@@ -30,6 +32,7 @@ Third-Party NPM Packages:
 ## Version
 
 1.0 - 12/09/2022 - Publishing of the website
+1.1 - 02/04/2023 - Improving HTTP requests with axios, upgrading button with delay and countdown option
 
 ## Author
 

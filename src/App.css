@@ -3,8 +3,8 @@
 
 html, 
 body {
-    background: url(img/background_picture.webp) center repeat;	    
-    background-size: cover;
+    background: url(img/background_picture.webp);	
+    background-position-x: 30%; 
     font-family:'BioRhyme', 'Times New Roman', Times, serif;
 }
 
@@ -16,12 +16,4 @@ h1 {
 h2,
 h3 {
     text-shadow: -1px -1px rgb(168, 139, 139), 1px 1px rgb(7, 7, 7), -3px 0 5px #000;
-}
-
-@media screen and (max-width: 500px) {
-    
-    html, 
-    body {
-        background-size: 140rem;
-    }
 }
