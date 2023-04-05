@@ -32,6 +32,7 @@ Third-Party NPM Packages:
 ## Version
 
 1.0 - 12/09/2022 - Publishing of the website
+
 1.1 - 02/04/2023 - Improving HTTP requests with axios, upgrading button with delay and countdown option
 
 ## Author

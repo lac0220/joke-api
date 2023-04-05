@@ -56,9 +56,15 @@ export default function ButtonAndCounter(props) {
     return (
         <div>
             <p className="mb-4 fs-2">You have been reading {counting} jokes</p>
-            <Button className="mx-auto text-center fs-3" aria-label="Next joke" variant="success" active disabled={delaying || countButton} 
-                onClick={() => {handleClickCount(); handleClickDelay(); handleClickCountdown()}} > 
-                {countButton ? `... ${countdown}` : 'Press for the next'} <FontAwesomeIcon icon={faWandSparkles} style={{marginLeft: "5px"}}/>
+            <Button 
+                className="mx-auto text-center fs-3" 
+                aria-label="Next joke" 
+                variant="success" 
+                active 
+                disabled={delaying || countButton} 
+                onClick={() => {handleClickCount(); handleClickDelay(); handleClickCountdown()}}>
+                {countButton ? `... ${countdown}` : 'Press for the next'} 
+                <FontAwesomeIcon icon={faWandSparkles} style={{ marginLeft: "5px" }} />
             </Button>   
         </div>
     );

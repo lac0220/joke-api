@@ -10,14 +10,14 @@ export default function App() {
     const [joke, setJoke] = useState(0);
 
     const generateJoke = () => {
-        axios.get("https://v2.jokeapi.dev/joke/Any") 
+        axios.get(`https://v2.jokeapi.dev/joke/Any`) 
         .then(response => {
             setJoke(response.data)
-            console.log(response.data)
+            // console.log(response.data)
         })
         .catch(error => {
             alert("The server is temporarily unable to service your request")
-            console.log(error)
+            // console.log(error)
         })  
     }
 

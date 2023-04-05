@@ -13,7 +13,7 @@ export default function Joke({joke}) {
     }, [joke]);
 
     return (
-        <div className="mt-5 overflow-auto" style={{height: "23rem"}} >
+        <div className="mt-5 overflow-auto" style={{ height: "23rem" }}>
             {
                 joke.type === 'single' ? <h2 className="display-5">{joke.joke}</h2> : 
                     <>
