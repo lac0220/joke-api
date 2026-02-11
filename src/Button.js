@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWandSparkles } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 
-export default function ButtonAndCounter(props) {
+export default function ButtonAndCounter({ generateJoke, disabled }) {
     const [counting, setCounting] = useState(1);
     const [countdown, setCountdown] = useState();
     const [countButton, setCountButton] = useState(false);
@@ -11,8 +11,8 @@ export default function ButtonAndCounter(props) {
 
     // Generating new joke and count number of jokes    
     const handleClickCount = () => {
-        setCounting(counting + 1) || props.generateJoke()
-    }
+    setCounting(prev => prev + 1);
+};
     
     // Delaying button click   
     const handleClickDelay = () => {
@@ -55,14 +55,19 @@ export default function ButtonAndCounter(props) {
     
     return (
         <div>
-            <p className="mb-4 fs-2">You have been reading {counting} jokes</p>
+            <p className="mb-5 fs-2">You have been reading {counting} joke(s)</p>
             <Button 
                 className="mx-auto text-center fs-3" 
                 aria-label="Next joke" 
                 variant="success" 
                 active 
-                disabled={delaying || countButton} 
-                onClick={() => {handleClickCount(); handleClickDelay(); handleClickCountdown()}}>
+                disabled={disabled || delaying || countButton}
+                onClick={() => {
+                    handleClickCount();
+                    handleClickDelay();
+                    handleClickCountdown();
+                    generateJoke();
+                }}>
                 {countButton ? `... ${countdown}` : 'Press for the next'} 
                 <FontAwesomeIcon icon={faWandSparkles} style={{ marginLeft: "5px" }} />
             </Button>   
