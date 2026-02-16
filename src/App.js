@@ -7,20 +7,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleDown} from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
+    const [usedJokes, setUsedJokes] = useState([]);
     const [joke, setJoke] = useState(0);
     const [isRevealing, setIsRevealing] = useState(true);
 
-    const generateJoke = () => {
-        axios.get(`https://v2.jokeapi.dev/joke/Any`) 
-        .then(response => {
-            setJoke(response.data)
-            // console.log(response.data)
-        })
-        .catch(error => {
-            alert("The server is temporarily unable to service your request")
-            // console.log(error)
-        })  
-    }
+    const generateJoke = async () => {
+        try {
+            let attempts = 0;
+            let newJoke;
+
+            while (attempts < 10) {
+                const response = await axios.get(
+                    "https://v2.jokeapi.dev/joke/Any"
+                );
+
+                newJoke = response.data;
+
+                if (!usedJokes.includes(newJoke.id)) break;
+
+                attempts++;
+            }
+
+            setUsedJokes(prev => [...prev, newJoke.id]);
+            setJoke(newJoke);
+
+        } catch (error) {
+            alert("The server is temporarily unable to service your request");
+        }
+    };
 
     useEffect(() => {
         generateJoke();

@@ -4,6 +4,8 @@ export default function Joke({ joke, onRevealStart, onRevealEnd }) {
     const [delivery, setDelivery] = useState('');
 
     useEffect(() => {
+        if (!joke) return;
+
         setDelivery('');
 
         if (joke.type === 'twopart') {
@@ -18,7 +20,7 @@ export default function Joke({ joke, onRevealStart, onRevealEnd }) {
         } else {
             onRevealEnd();
         }
-    }, [joke]);
+    }, [joke.id]);
 
     return (
         <div className="mt-5 overflow-auto" style={{ height: "23rem" }}>
