@@ -1,18 +1,53 @@
 # Jokes Generator
 
-A random jokes generator that fetches API data from an URL and gives access to jokes platform. In the meantime, the web application also keeps counting the number of reading jokes
+A React-based web application that fetches random jokes from a public API and displays them dynamically.
+
+The application allows users to generate new jokes on demand while tracking how many jokes have been viewed during the session.
+
+## Features
+
+- Fetches random jokes from an external API
+
+- Session-based joke counter
+
+- Button with delay and countdown functionality
+
+- Responsive design
+
+- Clean and simple UI
 
 ## Tech Stack
 
+### Frontend
+
 - React.js
+
 - Bootstrap 5
+
 - CSS3
+
+### API
+
+- JokeAPI (https://sv443.net/jokeapi/v2/)
+
+## Third-Party Libraries
+
+- axios – handling HTTP requests
+
+- react-bootstrap – Bootstrap component integration
+
+- @fortawesome/react-fontawesome – icon library and toolkit
+
+## API Reference
+
+This project uses JokeAPI, a free and well-structured joke API that provides categorized and formatted joke responses.
+
+Official documentation:
+https://sv443.net/jokeapi/v2/
 
 ## Setup
 
-Used [React](https://reactjs.org/) for implementation
-
-Free [API](https://sv443.net/jokeapi/v2/) - serves uniformly and well formatted jokes
+The project is implemented using [React](https://reactjs.org/)
 
 ### To run this project locally:
 
@@ -21,19 +56,12 @@ cd ../lorem
 $ npm install
 $ npm start
 ```
-Third-Party NPM Packages:
-
-- axios: for creating HTTP requests
-
-- react-bootstrap: for adding Bootstrap CSS Framework to the project
-
-- font awesome: for icon library and toolkit
 
 ## Version
 
-1.0 - 12/09/2022 - Publishing of the website
+1.0 – 12/09/2022 – Initial release
 
-1.1 - 02/04/2023 - Improving HTTP requests with axios, upgrading button with delay and countdown option
+1.1 – 02/04/2023 – Improved HTTP requests using Axios, added button delay and countdown feature
 
 ## Author
 
