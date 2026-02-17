@@ -13,6 +13,14 @@ export default function App() {
 
     const generateJoke = async () => {
         try {
+            let currentUsed = usedJokes;
+
+            if (currentUsed.length >= 100) {
+                alert("You've read all 100 jokes! Starting over...");
+                currentUsed = [];
+                setUsedJokes([]);
+            }
+
             let attempts = 0;
             let newJoke;
 
@@ -23,7 +31,7 @@ export default function App() {
 
                 newJoke = response.data;
 
-                if (!usedJokes.includes(newJoke.id)) break;
+                if (!currentUsed.includes(newJoke.id)) break;
 
                 attempts++;
             }

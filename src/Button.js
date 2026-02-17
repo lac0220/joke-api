@@ -55,7 +55,11 @@ export default function ButtonAndCounter({ generateJoke, disabled }) {
     
     return (
         <div>
-            <p className="mb-5 fs-2">You have been reading {counting} joke(s)</p>
+            <p className="mb-5 fs-2">
+                {counting === 1
+                    ? `You have read ${counting} joke`
+                    : `You have read ${counting} jokes`}
+            </p>
             <Button 
                 className="mx-auto text-center fs-3" 
                 aria-label="Next joke" 
